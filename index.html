@@ -4,132 +4,193 @@
   <meta charset="UTF-8">
   <title>Abel Sánchez Ramos | SysAdmin</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: "Segoe UI", sans-serif;
-      background: #0d1117;
-      color: #c9d1d9;
-      line-height: 1.6;
-    }
+<style>
 
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 40px 20px;
-    }
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    h1, h2, h3 {
-      margin-bottom: 10px;
-    }
+/* VARIABLES */
+:root {
+  --bg: #0d1117;
+  --card: #161b22;
+  --border: #30363d;
+  --text: #c9d1d9;
+  --muted: #8b949e;
+  --primary: #58a6ff;
+  --accent: #3fb950;
+}
 
-    h2 {
-      border-bottom: 1px solid #30363d;
-      padding-bottom: 5px;
-      margin-top: 40px;
-    }
+/* BASE */
+body {
+  font-family: "Inter", "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
 
-    /* HEADER */
-    .header {
-      display: flex;
-      gap: 40px;
-      align-items: center;
-      flex-wrap: wrap;
-    }
+/* CONTENEDOR */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 60px 20px;
+}
 
-    .profile-img {
-      width: 180px;
-      border-radius: 10px;
-    }
+/* TITULOS */
+h1 {
+  font-size: 36px;
+  font-weight: 600;
+}
 
-    .header-text h1 {
-      font-size: 32px;
-    }
+h2 {
+  font-size: 22px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 8px;
+}
 
-    .role {
-      color: #58a6ff;
-      margin: 5px 0;
-    }
+h3 {
+  font-size: 16px;
+  font-weight: 600;
+}
 
-    .status {
-      color: #3fb950;
-      font-size: 14px;
-      margin-top: 5px;
-    }
+/* HEADER */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 20px;
+}
 
-    .badges span {
-      background: #161b22;
-      padding: 5px 10px;
-      border-radius: 6px;
-      margin-right: 5px;
-      font-size: 13px;
-    }
+.profile-img {
+  width: 180px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 1px solid var(--border);
+}
 
-    /* CARDS */
-    .card {
-      background: #161b22;
-      padding: 20px;
-      border-radius: 8px;
-      margin-bottom: 15px;
-    }
+.role {
+  color: var(--primary);
+  margin-top: 5px;
+}
 
-    .date {
-      font-size: 13px;
-      color: #8b949e;
-      margin-bottom: 10px;
-    }
+.status {
+  color: var(--accent);
+  font-size: 14px;
+  margin-top: 6px;
+}
 
-    ul {
-      padding-left: 20px;
-    }
+/* BADGES */
+.badges {
+  margin-top: 15px;
+}
 
-    /* SKILLS */
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
+.badges span {
+  display: inline-block;
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  margin-right: 6px;
+}
 
-    .skill {
-      background: #21262d;
-      padding: 8px 12px;
-      border-radius: 6px;
-      font-size: 13px;
-    }
+/* TEXTO */
+p {
+  margin-bottom: 10px;
+  max-width: 700px;
+}
 
-    /* FOOTER */
-    .footer {
-      margin-top: 60px;
-      border-top: 1px solid #30363d;
-      padding-top: 30px;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      font-size: 14px;
-    }
+/* CARDS */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  transition: 0.2s ease;
+}
 
-    a {
-      color: #58a6ff;
-      text-decoration: none;
-    }
+.card:hover {
+  border-color: var(--primary);
+  transform: translateY(-2px);
+}
 
-    a:hover {
-      text-decoration: underline;
-    }
+/* FECHAS */
+.date {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
 
-    /* RESPONSIVE */
-    @media (max-width: 700px) {
-      .header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
+/* LISTAS */
+ul {
+  padding-left: 18px;
+}
 
-      .footer {
-        flex-direction: column;
-        gap: 15px;
-      }
-    }
-  </style>
+li {
+  margin-bottom: 5px;
+}
+
+/* SKILLS */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  transition: 0.2s;
+}
+
+.skill:hover {
+  border-color: var(--primary);
+}
+
+/* LINKS */
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* FOOTER */
+.footer {
+  margin-top: 60px;
+  border-top: 1px solid var(--border);
+  padding-top: 20px;
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  color: var(--muted);
+}
+
+/* RESPONSIVE */
+@media (max-width: 700px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .container {
+    padding: 30px 15px;
+  }
+}
+
+</style>
 </head>
 
 <body>
